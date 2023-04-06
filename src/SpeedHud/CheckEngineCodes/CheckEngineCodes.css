@@ -1,0 +1,13 @@
+.CheckEngineCodes {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+.CheckEngineCodes .code-list {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}

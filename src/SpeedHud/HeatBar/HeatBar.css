@@ -1,0 +1,51 @@
+.HeatBar {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    font-family: 'DigitalDefault';
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.HeatBar .bar-container {
+    width: 250px;
+    height: 5px;
+    padding: 3px;
+    border-radius: 2px;
+    position: relative;
+}
+
+.HeatBar .bar-container .heat-bar {
+    height: 100%;
+    border-radius: 2px;
+    transition: width 0.5s;
+    opacity: 1;
+}
+
+.HeatBar .bar-container .labels {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+}
+
+.HeatBar .bar-container .warning-threshold {
+    height: 100%;
+    width: 3px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.HeatBar .bar-container .heat-bar-label {
+    position: absolute;
+    width: 100%;
+    top: -20px;
+    font-size: 15px;
+}

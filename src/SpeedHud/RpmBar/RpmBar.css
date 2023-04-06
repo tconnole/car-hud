@@ -1,0 +1,37 @@
+:root {
+    --bar-width: calc(1280px - 40px);
+    --bar-gap: 6px;
+}
+
+.RpmBar {
+    height: 80px;
+    width: var(--bar-width);
+    border-radius: 5px;
+    padding: var(--bar-gap);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--bar-gap);
+    position: relative;
+}
+
+.RpmBar .labels {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bolder;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    font-size: 30px;
+}
+
+.RpmBar .rpm-tic {
+    height: calc(100%);
+    width: calc((var(--bar-width) - (var(--bar-gap) * 39))/ 40);
+    border-radius: 3px;
+    transition: background-color 1s;
+}

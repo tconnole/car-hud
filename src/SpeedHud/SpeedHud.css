@@ -1,0 +1,89 @@
+.SpeedHud {
+    width: 1280px;
+    height: 400px;
+    position: relative;
+}
+
+.SpeedHud .speed {
+    font-size: 200px;
+    font-family: 'DigitalDefault';
+    position: absolute;
+    top: 10px;
+    right: 70px
+}
+
+.SpeedHud .mph {
+    font-size: 40px;
+    font-weight: bolder;
+    font-family: 'DigitalDefault';
+    position: absolute;
+    right: 10px;
+    top: 130px;
+}
+
+.SpeedHud .rpm {
+    font-size: 50px;
+    font-family: 'DigitalDefault';
+    position: absolute;
+    left: 20px;
+    bottom: 5px;
+}
+
+.SpeedHud .bar {
+    position: absolute;
+    left: 15px;
+    bottom: 65px;
+}
+
+.SpeedHud .company {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    font-size: 30px;
+
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.SpeedHud .company .chevillon {
+    font-family: 'MonoFett';
+}
+
+.SpeedHud .drive {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    position: absolute;
+    top: 60px;
+    left: 420px;
+}
+
+.SpeedHud .drive .drive-card {
+    font-size: 65px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 2s;
+}
+
+.SpeedHud .temps {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: flex-end;
+
+    position: absolute;
+    right: 920px;
+    top: 70px;
+}
+
+.SpeedHud .engine-codes {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}

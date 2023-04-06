@@ -1,25 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
+import { createContext } from 'react';
 import './App.css';
+import SpeedHud from './SpeedHud/SpeedHud';
+// import './fonts/*';
+
+export interface HudTheme {
+  background: string;
+  primary: string;
+  warning: string
+}
+
+const BlackWhiteTheme: HudTheme = {background: '#000000', primary: '#ffffff', warning: '#ff5959'}
+
+const OrangeTheme: HudTheme = {background: '#000000', primary: '#ffc23d', warning: '#ff0000'};
+
+const BlueTheme: HudTheme = {background: '#000000', primary: '#03abff', warning: '#ff0080'};
+
+const defaultTheme: HudTheme = BlueTheme;
+
+export const ThemeContext = createContext<HudTheme>(defaultTheme)
+const drive = 'D';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeContext.Provider value={defaultTheme}>
+      <div className="App" style={{backgroundColor: defaultTheme.background, color: defaultTheme.primary}}>
+        <SpeedHud drive={drive}/>
+      </div>
+    </ThemeContext.Provider>
   );
 }
 
